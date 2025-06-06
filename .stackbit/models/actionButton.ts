@@ -1,41 +1,25 @@
-import { type ModelExtension } from '@stackbit/types';
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakta oss</title>
+</head>
+<body>
+  <h1>Kontakta oss</h1>
 
-export const actionButton: ModelExtension = {
-    name: 'actionButton',
-    fields: [
-        {
-            name: 'theme',
-            controlType: 'palette',
-            options: [
-                {
-                    label: 'Primary',
-                    value: 'primary',
-                    textColor: '#171227',
-                    backgroundColor: '#ffae9c',
-                    borderColor: '#ececec'
-                },
-                {
-                    label: 'Secondary',
-                    value: 'secondary',
-                    textColor: '#171227',
-                    backgroundColor: '#fff2d7',
-                    borderColor: '#ececec'
-                },
-                {
-                    label: 'Accent',
-                    value: 'accent',
-                    textColor: '#171227',
-                    backgroundColor: '#e3f1ff',
-                    borderColor: '#ececec'
-                },
-                {
-                    label: 'Neutral',
-                    value: 'neutral',
-                    textColor: '#d7d8e4',
-                    backgroundColor: '#171227',
-                    borderColor: '#ececec'
-                }
-            ]
-        }
-    ]
-};
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+
+    <label for="name">Namn:</label><br>
+    <input type="text" name="name" id="name" required><br><br>
+
+    <label for="phone">Telefonnummer:</label><br>
+    <input type="tel" name="phone" id="phone" required><br><br>
+
+    <label for="message">Meddelande:</label><br>
+    <textarea name="message" id="message" required></textarea><br><br>
+
+    <button type="submit">Skicka</button>
+  </form>
+</body>
+</html>
